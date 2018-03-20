@@ -1,0 +1,184 @@
+body {
+    background-color: #154073;
+    color: white;
+    font-family: 'Cantarell', sans-serif;
+    font-weight: 300;
+}
+
+.feature {
+    grid-area: feature;
+    padding: 20px;
+}
+
+#featureImage {
+    width: 160px;
+    float: right;
+}
+
+#profilePic {
+    width: 160px;
+
+}
+
+.cherrySmProfile {
+    width: 20px;
+    margin-left: 50px;
+    padding-left: 20px;
+    padding-right: 5px;
+    vertical-align: top;
+}
+
+.picTitle {
+  height: 20px;
+}
+
+.profileWrapper {
+  display: grid;
+  border: 1px solid red;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.content {
+    grid-area: content;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+
+.content h1 {
+    text-align: center;
+}
+
+.footer {
+    grid-area: footer;
+    font-size: .8em;
+    margin-left: 300px;
+}
+
+.header {
+    grid-area: header;
+    background: url("images/ola-logo-3d-inlinecrop-db-bgnd317x196.png") no-repeat;
+    margin-left: 10px;
+    margin-top: 40px;
+    color: #CE2131;
+    height: 200px;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas: "header" "feature" "content" "sidebar" "footer";
+    min-width: 960px;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 500px) {
+    .wrapper {
+        grid-template-columns: 20% auto;
+        grid-template-areas: "header   header" "feature  content" "sidebar sidebar" "footer   footer";
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .wrapper {
+        grid-gap: 20px;
+        grid-template-columns: 300px auto 150px;
+        grid-template-areas: "header  header  header" "feature content sidebar" "footer  footer  footer";
+        max-width: 600px;
+    }
+}
+
+.box {
+    min-height: 100px;
+}
+
+.sidebar {}
+
+.toplinks {
+    font-size: .9em;
+    float: right;
+    margin-right: 20px;
+}
+
+.toplinks ul {
+    list-style-type: none;
+}
+
+.toplinks li {
+    display: inline;
+}
+
+#toplinksReg {
+    color: #FFDD38;
+}
+
+#toplinksLog {
+    color: #CE2131;
+}
+
+.cherrySm {
+    width: 20px;
+    margin-left: 10px;
+    padding-left: 20px;
+    padding-right: 5px;
+    vertical-align: top;
+}
+
+h1 {
+    color: #CE2131;
+    font-size: 1.7em;
+}
+
+h2 {
+    color: #FFDD38;
+}
+
+p {
+    font-weight: 200;
+}
+
+.iconsm {
+    color: #FFDD38;
+    font-weight: 300;
+}
+
+.iconexcl {
+    color: #CE2131;
+    font-weight: 300;
+}
+
+.search {
+    border-top: #FFDD38 solid 2px;
+    border-bottom: #FFDD38 solid 2px;
+}
+
+.searchBox input {
+    width: 150px;
+    height: 20px;
+}
+
+.searchCity {
+    vertical-align: middle;
+    margin-left: 0;
+    display: inline-block;
+    margin: 10px;
+}
+
+.footerList {
+    display: inline-block;
+    width: 100px;
+    height: 75px;
+    margin: 10px;
+    list-style-type: none;
+    color: #CE2131;
+}
+
+.intro {
+    padding: 20px;
+    text-align: center;
+    line-height: 24px;
+    font-weight: 100;
+    margin: 20px 20px;
+}
