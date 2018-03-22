@@ -37,6 +37,14 @@ body {
   border: 1px solid red;
 }
 
+.online {
+  display: grid;
+}
+
+.onlineParts {
+  justify-content: flex-end;
+}
+
 .sidebar {
     grid-area: sidebar;
 }
