@@ -1,9 +1,9 @@
 import React from 'react';
 import Footer from './Footer';
 import ProfileImage from './ProfileImage';
+import AddUserForm from './AddUserForm';
 import RightBox from './RightBox';
 import Header from './Header';
-import Content from './Content';
 
 class Profile extends React.Component {
     render() {
@@ -12,7 +12,7 @@ class Profile extends React.Component {
             <Header />
             <ProfileImage />
             <RightBox />
-            <Content />
+            <AddUserForm />
             <Footer />
           </div>
         );

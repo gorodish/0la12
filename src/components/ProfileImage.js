@@ -13,8 +13,8 @@ class ProfileImage extends React.Component {
               <img src={profilePic} id="profilePic" alt="User" />
             </div>
             <div className="online">
-              <p><img className="cherrySmProfile" src={cherrySmProfile} alt="cherry" /></p>
-              <p>Online</p>
+              <p className="onlineParts"><img className="cherrySmProfile" src={cherrySmProfile} alt="cherry" /></p>
+              <p className="onlineParts">Online</p>
             </div>
           </div>
         );
