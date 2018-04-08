@@ -35,6 +35,7 @@ body {
 .profileWrapper {
   display: grid;
   border: 1px solid red;
+  
 }
 
 .online {
@@ -96,10 +97,6 @@ body {
         grid-template-areas: "header  header  header" "feature content sidebar" "footer  footer  footer";
         max-width: 600px;
     }
-}
-
-.box {
-    min-height: 100px;
 }
 
 .sidebar {}
@@ -174,13 +171,21 @@ p {
     margin: 10px;
 }
 
-.footerList {
-    display: inline-block;
-    width: 100px;
-    height: 75px;
+.footer ul {
+    display: grid;
+    padding: 0;
+    height: 25px;
     margin: 10px;
-    list-style-type: none;
+    list-style: none;
     color: #CE2131;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    text-align: center;
+}
+
+footer li {
+  display: block;
+  text-decoration: none;
+  align-content: center;
 }
 
 .intro {

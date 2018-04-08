@@ -5,9 +5,9 @@ import cherrySmProfile from '../css/images/dent-button-cherry-apple-active.png';
 class ProfileImage extends React.Component {
     render() {
       var profileImageStyle = {
+        display: 'grid',
         height: 240,
-        backgroundColor: this.props.color,
-        marginTop: "50px"
+        marginTop: "0"
       };
         return (
             <div style={profileImageStyle}>

@@ -4,7 +4,7 @@ import cherryLg from '../css/images/dent-button-cherry-apple-active.png';
 class Content extends React.Component {
   render() {
     return (
-      <div className="box content">
+      <div className="content">
         <h1>Language Exchange Network</h1>
         <div className="intro">
             <p>Connect with <span className="iconsm">Ola</span><span className="iconexcl">!</span> members to spend time practicing your language skills</p>

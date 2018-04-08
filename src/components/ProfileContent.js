@@ -4,16 +4,8 @@ import cherrySmProfile from '../css/images/dent-button-cherry-apple-active.png';
 
 class ProfileContent extends React.Component {
     render() {
-      var profileStyle = {
-          fontFamily: "sans-serif",
-          fontWeight: "bold",
-          padding: 13,
-          color: "blue",
-          padding: 50
-          };
         return (
-          <div profileStyle>
-            <h1>{this.props.name}</h1>
+          <div className="profileWrapper">
             <p className="onlineParts"><img className="cherrySmProfile" src={cherrySmProfile} alt="cherry" /></p>
             <p className="onlineParts">Online</p>
             <p>{this.props.email}</p>
