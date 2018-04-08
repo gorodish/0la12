@@ -14,6 +14,7 @@ class Home extends React.Component {
             <FeatureBox />
             <RightBox />
             <Content />
+            <button>search</button>
             <Footer />
           </div>
         );

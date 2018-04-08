@@ -6,14 +6,33 @@ import Header from './Header';
 import Content from './Content';
 import Profile from './Profile';
 import Home from './Home';
+import AddUserForm from './AddUserForm';
+import SearchResults from './SearchResults';
+import sampleUsers from '../sample-users';
 import '../css/style.css';
 
 class App extends React.Component {
+  state = {
+    users: {}
+  };
+  addUser = user => {
+    console.log("adding a user")
+  };
+  loadSampleUsers = () => {
+    this.setState({ users: sampleUsers});
+  };
     render() {
         return (
           <div className="wrapper">
+            <ul>{Object.keys(this.state.users).map(key => <Profile key={key} />)}</ul>
             <Header />
-            <Profile name={ Bob } />
+            <Profile
+              name="Neil Montgomery"
+              email="neilmontgomery.me"
+              location="Seville"
+              phone="0011188886666"
+              loadSampleUsers={this.loadSampleUsers} />
+            <Content />
             <RightBox />
             <Content />
             <Footer />

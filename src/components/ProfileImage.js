@@ -4,19 +4,15 @@ import cherrySmProfile from '../css/images/dent-button-cherry-apple-active.png';
 
 class ProfileImage extends React.Component {
     render() {
+      var profileImageStyle = {
+        height: 240,
+        backgroundColor: this.props.color,
+        marginTop: "50px"
+      };
         return (
-          <div className="profileWrapper">
-            <div className="picTitle">
-              <h1>Bob Smith</h1>
-            </div>
-            <div className="profilePic">
+            <div style={profileImageStyle}>
               <img src={profilePic} id="profilePic" alt="User" />
             </div>
-            <div className="online">
-              <p className="onlineParts"><img className="cherrySmProfile" src={cherrySmProfile} alt="cherry" /></p>
-              <p className="onlineParts">Online</p>
-            </div>
-          </div>
         );
     }
 }

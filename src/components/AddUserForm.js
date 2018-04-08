@@ -2,13 +2,21 @@ import React from 'react';
 import PropTypes from "prop-types";
 
 class AddUserForm extends React.Component {
-  static propTypes = {
-    profile: PropTypes.shape({
-      name: PropTypes.string,
-      email: PropTypes.string,
-      location: PropTypes.string,
-      phone: PropTypes.string
-    })
+  nameRef = React.createRef();
+  emailRef = React.createRef();
+  locationRef = React.createRef();
+  phoneRef = React.createRef();
+
+  createUser = event => {
+//1 - stop the form from submitting
+    event.preventDefault();
+    const user = {
+      name: this.nameRef.value.value,
+      email: this.emailRef.value.value,
+      location: this.locationRef.value.value,
+      phone: this.phoneRef.value.value,
+    }
+    console.log("adding a user");
   };
     render() {
         return (
@@ -16,17 +24,20 @@ class AddUserForm extends React.Component {
             <input
               type="text"
               name="name"
-              value="name"
+              ref={this.nameRef}
+              placeholder="name"
             />
             <input
               type="text"
               name="email"
-              value="email"
+              ref={this.emailRef}
+              placeholder="email"
             />
             <select
               type="text"
               name="location"
-              value="location"
+              ref={this.locationRef}
+              placeholder="location"
             >
               <option value="here">Here!</option>
               <option value="there">There</option>
@@ -34,11 +45,10 @@ class AddUserForm extends React.Component {
             <input
               type="text"
               name="phone"
-              value="phone"
+              ref={this.phoneRef}
+              placeholder="phone"
             />
-            <button onClick={() => this.props.deleteProfile(this.props.index)}>
-              Remove Profile
-            </button>
+            <button type="submit">+ Add User</button>
           </div>
         );
     }
