@@ -24,17 +24,13 @@ class App extends React.Component {
     render() {
         return (
           <div className="wrapper">
-            <ul>{Object.keys(this.state.users).map(key => <Profile key={key} />)}</ul>
+
             <Header />
-            <Profile
-              name="Neil Montgomery"
-              email="neilmontgomery.me"
-              location="Seville"
-              phone="0011188886666"
-              loadSampleUsers={this.loadSampleUsers} />
+              <ul>{Object.keys(this.state.users).map(key => <Profile key={key} details={this.state.users[key]} />)}</ul>
+
             <Content />
-            <RightBox />
-            <Content />
+            <RightBox loadSampleUsers={this.loadSampleUsers} />
+            <Content><SearchResults /></Content>
             <Footer />
           </div>
         );

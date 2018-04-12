@@ -6,6 +6,7 @@ import FeatureBox from './FeatureBox';
 
 class SearchResults extends React.Component {
     render() {
+      const { name, phone, location, email, photo, gender, age, description, lang_native, lang_practice, lang_other } = this.props.details;
         return (
           <div className="wrapper">
             <Header />
@@ -13,9 +14,9 @@ class SearchResults extends React.Component {
             <RightBox />
             <div>
               <ul>
-                <li>Bob Smith</li>
-                <li>Alice Wonderland</li>
-                <li>Jeff Jeffling</li>
+                <li>{name}</li>
+                <li>{location}</li>
+                <li>{description}</li>
               </ul>
               <button onClick={this.props.loadSampleUsers}>Load sample results</button>
             </div>

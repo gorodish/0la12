@@ -6,8 +6,8 @@ class ProfileContent extends React.Component {
     render() {
         return (
           <div className="profileWrapper">
-            <p className="onlineParts"><img className="cherrySmProfile" src={cherrySmProfile} alt="cherry" /></p>
-            <p className="onlineParts">Online</p>
+            <span className="onlineParts"><img className="cherrySmProfile" src={cherrySmProfile} alt="cherry" /></span>
+            <span className="online">Online</span>
             <p>{this.props.email}</p>
             <p>{this.props.phone}</p>
             <p>{this.props.location}</p>

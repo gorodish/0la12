@@ -7,7 +7,9 @@ class ProfileImage extends React.Component {
       var profileImageStyle = {
         display: 'grid',
         height: 240,
-        marginTop: "0"
+        width: '160px',
+        marginTop: 0,
+        object-fit: 'cover'
       };
         return (
             <div style={profileImageStyle}>
