@@ -1,29 +1,24 @@
 import React from 'react';
 import Footer from './Footer';
+import FeatureBox from './FeatureBox';
 import RightBox from './RightBox';
 import Header from './Header';
-import FeatureBox from './FeatureBox';
+import Content from './Content';
+import '../css/style.css';
 
 class SearchResults extends React.Component {
-    render() {
-      const { name, phone, location, email, photo, gender, age, description, lang_native, lang_practice, lang_other } = this.props.details;
-        return (
-          <div className="wrapper">
-            <Header />
-            <FeatureBox />
-            <RightBox />
-            <div>
-              <ul>
-                <li>{name}</li>
-                <li>{location}</li>
-                <li>{description}</li>
-              </ul>
-              <button onClick={this.props.loadSampleUsers}>Load sample results</button>
-            </div>
-            <Footer />
-          </div>
-        );
-    }
+  render() {
+    return (
+      <div className="wrapper">
+        <Header />
+        <FeatureBox />
+        <RightBox />
+        <Content />
+        <button>search</button>
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default SearchResults;

@@ -16,25 +16,27 @@ class App extends React.Component {
     users: {}
   };
   addUser = user => {
-    console.log("adding a user")
+    console.log('adding a user');
   };
   loadSampleUsers = () => {
-    this.setState({ users: sampleUsers});
+    this.setState({ users: sampleUsers });
   };
-    render() {
-        return (
-          <div className="wrapper">
-
-            <Header />
-              <ul>{Object.keys(this.state.users).map(key => <Profile key={key} details={this.state.users[key]} />)}</ul>
-
-            <Content />
-            <RightBox loadSampleUsers={this.loadSampleUsers} />
-            <Content><SearchResults /></Content>
-            <Footer />
-          </div>
-        );
-    }
+  render() {
+    return (
+      <div className="wrapper">
+        <Header />
+        <ul>
+          {Object.keys(this.state.users).map(key => (
+            <Profile key={key} details={this.state.users[key]} />
+          ))}
+        </ul>
+        <Content />
+        <RightBox loadSampleUsers={this.loadSampleUsers} />
+        <Content />
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;
