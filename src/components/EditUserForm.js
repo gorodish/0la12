@@ -64,19 +64,19 @@ class EditUserForm extends React.Component {
           type="text"
           name="lang_native"
           onChange={this.handleChange}
-          value={this.props.user.lnative}
+          value={this.props.user.lang_native}
         />
         <input
           type="text"
           name="lang_practice"
           onChange={this.handleChange}
-          value={this.props.user.lpractice}
+          value={this.props.user.lang_practice}
         />
         <input
           type="text"
           name="lang_other"
           onChange={this.handleChange}
-          value={this.props.user.lother}
+          value={this.props.user.lang_other}
         />
       </div>
     );
