@@ -1,9 +1,6 @@
 import React from 'react';
-import profilePic from '../css/images/nm-portrait-04-ola160x240_2x.jpg';
-import cherrySmProfile from '../css/images/dent-button-cherry-apple-active.png';
-import sampleUsers from '../sample-users';
 
-class ProfileContent extends React.Component {
+class User extends React.Component {
   render() {
     const {
       name,
@@ -19,7 +16,7 @@ class ProfileContent extends React.Component {
       lang_other
     } = this.props.details;
     return (
-      <li>
+      <li className="single-user">
         <h1>{name}</h1>
         <img src={photo} alt={name} />
         <p>Phone: {phone}</p>
@@ -36,4 +33,4 @@ class ProfileContent extends React.Component {
   }
 }
 
-export default ProfileContent;
+export default User;
