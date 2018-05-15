@@ -22,7 +22,7 @@ class ProfileOther extends React.Component {
             updateUser={this.props.updateUser}
           />
         ))}
-        <AddUserForm addUser={this.props.addUser} />
+
         <button onClick={this.props.loadSampleUsers}>Load profiles</button>
       </div>
     );
