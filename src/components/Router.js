@@ -9,9 +9,10 @@ import ProfilePicker from './ProfilePicker';
 const Router = () => (
   <BrowserRouter>
     <Switch>
-      <Route exact path="/" component={App} />
+      <Route exact path="/" component={ProfilePicker} />
+      <Route exact path="/app" component={App} />
       <Route exact path="/search-results" component={SearchResults} />
-      <Route path="/profile/:profileId" component={ProfileOther} />
+      <Route path="/profile/:profileId" component={App} />
       <Route component={NotFound} />
     </Switch>
   </BrowserRouter>

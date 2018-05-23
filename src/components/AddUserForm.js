@@ -71,7 +71,7 @@ class AddUserForm extends React.Component {
           <option value="Female">Female</option>
         </select>
         <input name="age" type="text" ref={this.ageRef} placeholder="age" />
-        <input
+        <textarea
           name="description"
           type="text"
           ref={this.descRef}

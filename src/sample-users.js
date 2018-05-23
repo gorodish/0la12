@@ -1,5 +1,6 @@
 const users = {
   user1: {
+    profileId: 111,
     name: 'Neil Montgomery',
     phone: '0111666888',
     location: 'Seville',
@@ -14,6 +15,7 @@ const users = {
   },
 
   user2: {
+    profileId: 222,
     name: 'Nicholas Cage',
     phone: '0111666888',
     location: 'Los Angeles',
@@ -29,6 +31,7 @@ const users = {
   },
 
   user3: {
+    profileId: 333,
     name: 'Stormzy',
     phone: '0111665588',
     location: 'Johannesburg',
@@ -44,6 +47,7 @@ const users = {
   },
 
   user4: {
+    profileId: 444,
     name: 'Elvis Costello',
     phone: '0111665588',
     location: 'Paddington',
@@ -59,6 +63,7 @@ const users = {
   },
 
   user5: {
+    profileId: 555,
     name: 'Margaret Rutherford',
     phone: '0111665588',
     location: 'St Mary Mead',
@@ -74,6 +79,7 @@ const users = {
   },
 
   user6: {
+    profileId: 666,
     name: 'Anja Øyen Vister',
     phone: '0111665588',
     location: 'The fjords',

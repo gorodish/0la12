@@ -211,9 +211,51 @@ footer li {
 }
 
 .intro {
-  padding: 20px;
+  padding: 10px;
   text-align: center;
-  line-height: 24px;
+  line-height: 18px;
   font-weight: 100;
-  margin: 20px 20px;
+  margin: 10px 10px;
+}
+
+.user-edit {
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ffdd38;
+  overflow: hidden;
+  display: grid;
+  color: #ffdd38;
+}
+
+.user-edit input,
+.user-edit textarea,
+.user-edit select {
+  width: 100%;
+  padding: 10px;
+  line-height: 1;
+  font-size: 1rem;
+  font-weight: lighter;
+  border: 0;
+  border-bottom: 1px solid #ffdd38;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  background: #154073;
+  color: #ffdd38;
+}
+.user-edit input:focus,
+.user-edit textarea:focus,
+.user-edit select:focus {
+  outline: 0;
+  background: #fef2de;
+}
+.user-edit textarea {
+  width: 100%;
+}
+.user-edit input:last-of-type {
+  width: 100%;
+}
+.user-edit button {
+  width: 100%;
+  border: 0;
 }

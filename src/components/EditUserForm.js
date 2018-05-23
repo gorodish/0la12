@@ -54,9 +54,9 @@ class EditUserForm extends React.Component {
           onChange={this.handleChange}
           value={this.props.user.age}
         />
-        <text
+        <textarea
           type="text"
-          name="age"
+          name="description"
           onChange={this.handleChange}
           value={this.props.user.description}
         />

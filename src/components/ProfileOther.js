@@ -1,15 +1,12 @@
 import React from 'react';
-import AddUserForm from './AddUserForm';
 import EditUserForm from './EditUserForm';
-import Header from './Header';
-import Footer from './Footer';
-import Content from './Content';
-import RightBox from './RightBox';
-import FeatureBox from './FeatureBox';
-import ProfileContent from './ProfileContent';
-import sampleUsers from '../sample-users';
+import AddUserForm from './AddUserForm';
 
 class ProfileOther extends React.Component {
+  state = {
+    profileId: null
+  };
+
   render() {
     return (
       <div className="profile">
@@ -20,9 +17,10 @@ class ProfileOther extends React.Component {
             index={key}
             user={this.props.users[key]}
             updateUser={this.props.updateUser}
+            deleteUser={this.props.deleteUser}
           />
         ))}
-
+        <AddUserForm addUser={this.props.addUser} />
         <button onClick={this.props.loadSampleUsers}>Load profiles</button>
       </div>
     );

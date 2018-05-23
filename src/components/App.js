@@ -1,23 +1,24 @@
 import React from 'react';
 import Footer from './Footer';
-import FeatureBox from './FeatureBox';
-import RightBox from './RightBox';
 import Header from './Header';
-import Content from './Content';
 import ProfileOther from './ProfileOther';
-import Home from './Home';
-import AddUserForm from './AddUserForm';
-import SearchResults from './SearchResults';
-import ProfileContent from './ProfileContent';
-import User from './User';
 import PropTypes from 'prop-types';
 import sampleUsers from '../sample-users';
 import '../css/style.css';
+import base from '../base';
 
 class App extends React.Component {
   state = {
     users: {}
   };
+
+  componentDidMount() {
+    const { params } = this.props.match;
+    this.ref = base.syncState(`${params.profileId}/users`, {
+      context: this,
+      state: 'users'
+    });
+  }
 
   addUser = user => {
     //take a copy
@@ -51,18 +52,13 @@ class App extends React.Component {
           <Header />
         </div>
 
-        <div className="feature">
-          <ul className="users">
-            {Object.keys(this.state.users).map(key => (
-              <User key={key} details={this.state.users[key]} />
-            ))}
-          </ul>
-        </div>
         <ProfileOther
           addUser={this.addUser}
           updateUser={this.updateUser}
           loadSampleUsers={this.loadSampleUsers}
           users={this.state.users}
+          profileId={this.props.match.params.profileId}
+          deleteUser={this.deleteUser}
         />
         <div className="sidebar" />
         <div className="footer">
